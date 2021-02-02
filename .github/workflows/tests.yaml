@@ -1,0 +1,18 @@
+name: Tests
+
+on:
+  pull_request:
+    branches: [ main, dev ]
+  push:
+    branches: [ main, dev ]
+
+jobs:
+  test:
+
+    container: epitechcontent/epitest-docker:latest
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Compile check 🚀
+        run: make tests_run && make coverage
