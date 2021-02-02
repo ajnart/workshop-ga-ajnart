@@ -1,2 +1,2 @@
 # workshop-ga-ajnart
-![link](https://github.com/ajnart/workshop-ga-ajnart/workflows/C++%CI/badge.svg)
+![link](https://github.com/ajnart/workshop-ga-ajnart/workflows/CI/badge.svg)
