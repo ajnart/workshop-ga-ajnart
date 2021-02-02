@@ -13,13 +13,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@master
       - name: Compile check 🚀
-        run: make tests_run; make coverage
-
-      - name: Deploy
-        uses: ./docs
+        run: make tests_run
+      - name: Coverage report ✅
+        run: make coverage
+      - name: Publish coverage
+        uses: EndBug/add-and-commit@v4
         with:
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          remote_url: https://github.com/appleboy/gh-pages-action.git
+          add: docs
+          force: true
+          message: Add generated docs
+        env:
+          GITHUB_TOKEN: $
