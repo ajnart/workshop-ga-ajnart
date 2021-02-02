@@ -15,4 +15,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Compile check 🚀
-        run: make tests_run && make coverage
+        run: make tests_run; make coverage
