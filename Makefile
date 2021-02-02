@@ -66,7 +66,7 @@ tests_run:	$(SRC_OBJ) $(TEST_OBJ)
 .PHONY: coverage
 coverage:
 	gcovr -b --exclude-directories tests
-	gcovr -r . --exclude-directories tests --html --html-details -o ./docs/coverage.html
+	gcovr -r . --exclude-directories tests --html --html-details -o ./docs/index.html
 
 ## Clear rules
 .PHONY: clean
