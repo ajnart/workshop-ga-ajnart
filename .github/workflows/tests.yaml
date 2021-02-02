@@ -17,11 +17,9 @@ jobs:
       - name: Compile check 🚀
         run: make tests_run; make coverage
 
-      - name: Publish test coverage report
-        uses: EndBug/add-and-commit@v4
+      - name: Publish
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          add: docs
-          force: true
-          message: Add generated docs
-        env:
-          GITHUB_TOKEN: $
+            ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            BRANCH: gh-pages
+            FOLDER: docs
