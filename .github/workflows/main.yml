@@ -24,5 +24,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Compile check 🚀
-        run: make tests_run
+        run: make tests_run && make coverage
         continue-on-error: true
+        
