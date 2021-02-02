@@ -16,6 +16,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Compile check 🚀
         run: make tests_run; make coverage
+      - name: checkout
+        uses: actions/checkout@v1
       - name: deploy docs
         uses: ./
         with:
