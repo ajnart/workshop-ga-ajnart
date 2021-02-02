@@ -3,7 +3,7 @@ name: Push
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   release-on-push:
@@ -11,6 +11,6 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: rymndhng/release-on-push-action@master
+      - uses: rymndhng/release-on-push-action@main
         with:
           bump_version_scheme: minor
